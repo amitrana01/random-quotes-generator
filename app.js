@@ -28,3 +28,14 @@ const quotes = [
     author: ' Tyne Daly',
   },
 ];
+
+const button = document.querySelector('.btn');
+
+button.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  let randomQuote = Math.floor(Math.random() * quotes.length);
+
+  document.querySelector('#quotes').textContent = quotes[randomQuote].quote;
+  document.querySelector('#author').textContent = quotes[randomQuote].author;
+});
