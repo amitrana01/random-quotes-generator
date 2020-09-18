@@ -36,6 +36,10 @@ button.addEventListener('click', function (e) {
 
   let randomQuote = Math.floor(Math.random() * quotes.length);
 
-  document.querySelector('#quotes').textContent = quotes[randomQuote].quote;
-  document.querySelector('#author').textContent = quotes[randomQuote].author;
+  document.querySelector(
+    '#quotes'
+  ).textContent = `Quotes: ${quotes[randomQuote].quote}`;
+  document.querySelector(
+    '#author'
+  ).textContent = `Author: ${quotes[randomQuote].author}`;
 });
